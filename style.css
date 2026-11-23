@@ -1,0 +1,840 @@
+@import url('https://fonts.googleapis.com/css2?family=Cairo:wght@400;500;600;700;800&display=swap');
+:root{--bg:#050b16;--panel:#0b1424;--panel2:#101d31;--blue:#087cf0;--cyan:#18b8ff;--silver:#dce5ef;--muted:#9aa9bb;--line:#24364d}
+* {
+    box-sizing: border-box;
+}
+
+html {
+    scroll-behavior: smooth;
+}
+
+body {
+    margin: 0;
+    background: var(--bg);
+    color: #f6f8fb;
+    font-family: 'Cairo', Tahoma, sans-serif;
+    line-height: 1.8;
+}
+a{color:inherit;text-decoration:none}.topbar{height:auto;min-height:82px;padding:14px 7%;display:flex;align-items:center;justify-content:space-between;gap:24px;border-bottom:1px solid var(--line);background:#050b16ee;position:sticky;top:0;z-index:5;backdrop-filter:blur(12px)}
+.brand{display:flex;align-items:center;gap:12px}.mark{font-size:36px;font-weight:800;color:#e8eef6;line-height:1;position:relative}.mark span{color:var(--cyan);font-size:24px;position:absolute;top:-8px;right:-9px}.brand-name{font-size:22px;letter-spacing:4px;font-weight:700}.brand-name small{display:block;font-size:9px;letter-spacing:2px;color:var(--muted);margin-top:-7px}
+nav{display:flex;gap:26px;font-size:14px;color:#c5d0dd}nav a:hover{color:var(--cyan)}
+.hero{min-height:490px;padding:90px 10%;display:flex;align-items:center;justify-content:space-between;gap:40px;overflow:hidden;background:radial-gradient(ellipse at 75% 45%,#12366a 0,transparent 38%),linear-gradient(120deg,#050b16,#08172b)}
+.hero-copy{max-width:610px}.eyebrow{color:var(--cyan);font-weight:700;font-size:14px;letter-spacing:1px}.hero h1{font-size:clamp(34px,5vw,58px);line-heigbodyht:1.25;margin:12px 0}.hero h1 span{color:var(--cyan);letter-spacing:2px}.lead{font-size:18px;color:#b9c6d5;max-width:570px;margin-bottom:28px}.hero-mark{font-size:clamp(180px,28vw,340px);font-weight:800;line-height:1;color:#e8eef6;text-shadow:12px 15px 0 #087cf055,0 0 65px #087cf066;transform:skew(-8deg)}
+.button{display:inline-block;border:0;border-radius:9px;padding:11px 25px;font:700 15px 'Cairo',sans-serif;cursor:pointer;transition:.2s}.primary{background:linear-gradient(110deg,#0867d6,#12a9ff);color:white;box-shadow:0 8px 25px #087cf033}.primary:hover{transform:translateY(-2px);filter:brightness(1.12)}.outline{border:1px solid #7d91aa;color:#e8eef6;background:transparent}.outline:hover{border-color:var(--cyan);color:var(--cyan)}
+.section{padding:75px 9%;max-width:1250px;margin:auto}.section-heading{text-align:center;margin-bottom:38px}.section-heading h2,.contact h2{font-size:34px;margin:3px 0}.section-heading p:last-child,.contact>p:not(.eyebrow){color:var(--muted)}
+.product-card{display:flex;align-items:center;gap:48px;background:linear-gradient(135deg,#0c1728,#101f35);border:1px solid var(--line);border-radius:18px;padding:30px;max-width:850px;margin:auto}
+.book-art{width:210px;min-width:210px;height:285px;padding:20px 16px;background:linear-gradient(145deg,#101a2a,#02050b);border:1px solid #53647b;box-shadow:12px 13px 25px #0008;display:flex;flex-direction:column;justify-content:space-between;text-align:center}
+.book-art span{font-size:13px;letter-spacing:3px;color:#dbe6f2}.book-art strong{font-size:27px;line-height:1.5}.book-art b{color:#e5b84e}.book-art small{font-size:11px;color:#bdc9d7}.product-info h3{font-size:26px;margin:8px 0}.product-info p{color:#b3c0d0}.tag{font-size:12px;color:var(--cyan);border:1px solid #087cf066;padding:4px 10px;border-radius:20px}.coming-soon{text-align:center;color:var(--muted);margin-top:25px}
+.reviews{max-width:900px}.review-form{max-width:620px;margin:auto;display:grid;gap:16px;background:var(--panel);border:1px solid var(--line);padding:28px;border-radius:16px}.review-form label{display:grid;gap:7px;color:#dce5ef;font-weight:600}.review-form input,.review-form select,.review-form textarea{width:100%;background:#07101d;color:white;border:1px solid #30445e;border-radius:8px;padding:12px;font:14px 'Cairo',sans-serif}.review-form input:focus,.review-form select:focus,.review-form textarea:focus{outline:1px solid var(--cyan);border-color:var(--cyan)}.form-note{font-size:12px;color:#e6bd69;margin:0}.review-list{max-width:620px;margin:20px auto}.review-item{padding:16px;margin-top:12px;border:1px solid var(--line);border-radius:10px;background:#091322}.stars{color:#f0c45d}
+.contact{text-align:center;padding:70px 20px;background:linear-gradient(120deg,#0b1c32,#07101d);border-top:1px solid var(--line)}.contact small{display:block;color:#8495a9;margin-top:12px}
+footer{padding:24px 7%;display:flex;align-items:center;justify-content:space-between;gap:15px;flex-wrap:wrap;color:#8495a9;font-size:12px;border-top:1px solid var(--line)}.footer-brand{font-size:18px;letter-spacing:3px;color:#e9eef5;font-weight:800}
+@media(max-width:760px){.topbar{align-items:flex-start;flex-direction:column}.topbar nav{width:100%;gap:16px;overflow:auto;font-size:12px;padding-bottom:4px}.hero{padding:65px 7%;min-height:420px}.hero-mark{display:none}.section{padding:55px 6%}.product-card{flex-direction:column;gap:25px}.book-art{width:190px;min-width:190px;height:255px}.product-info{text-align:center}.review-form{padding:20px}footer{justify-content:center;text-align:center}}
+/* ZENOVA Premium Header */
+
+.topbar {
+    min-height: 90px;
+    padding: 15px 7%;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 25px;
+    background: rgba(5, 11, 22, 0.96);
+    border-bottom: 1px solid rgba(255,255,255,0.08);
+    position: sticky;
+    top: 0;
+    z-index: 100;
+    backdrop-filter: blur(15px);
+}
+
+.brand {
+    display: flex;
+    align-items: center;
+    gap: 13px;
+}
+
+.logo-mark {
+    font-size: 43px;
+    font-weight: 800;
+    font-style: italic;
+    color: #dce5ef;
+    text-shadow: 3px 3px 15px #087cf0;
+}
+
+.brand-name {
+    font-size: 23px;
+    font-weight: 800;
+    letter-spacing: 4px;
+    color: #ffffff;
+}
+
+.brand-name small {
+    display: block;
+    font-size: 9px;
+    letter-spacing: 1.5px;
+    color: #18b8ff;
+    margin-top: -5px;
+}
+
+.main-nav {
+    display: flex;
+    align-items: center;
+    gap: 30px;
+}
+
+.main-nav a {
+    color: #bdc9d7;
+    font-size: 14px;
+    transition: 0.3s;
+}
+
+.main-nav a:hover {
+    color: #18b8ff;
+}
+
+.header-btn {
+    padding: 9px 20px;
+    border: 1px solid #087cf0;
+    border-radius: 8px;
+    color: white;
+    transition: 0.3s;
+}
+
+.header-btn:hover {
+    background: #087cf0;
+    box-shadow: 0 0 20px #087cf066;
+}
+
+@media(max-width: 760px) {
+    .topbar {
+        flex-wrap: wrap;
+    }
+
+    .main-nav {
+        order: 3;
+        width: 100%;
+        justify-content: space-between;
+        gap: 10px;
+    }
+
+    .main-nav a {
+        font-size: 12px;
+    }
+
+    .header-btn {
+        font-size: 12px;
+    }
+}
+/* ZENOVA Hero Identity */
+
+.hero {
+    min-height: 440px;
+    padding: 65px 10%;
+    gap: 50px;
+}
+
+.hero-mark {
+    position: relative;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    min-width: 400px;
+    height: 350px;
+    font-size: 340px;
+    line-height: 1;
+    transform: none;
+}
+
+.hero-z {
+    font-weight: 900;
+    font-style: italic;
+    color: #e5edf7;
+    text-shadow: 12px 15px 0 #087cf055;
+    transform: skew(-8deg);
+}
+
+.hero-ribbon {
+    position: absolute;
+    width: 75%;
+    height: 35%;
+    left: 10%;
+    top: 43%;
+    border-bottom: 12px solid #087cf0;
+    border-radius: 0 0 65% 45%;
+    transform: rotate(-28deg);
+    filter: drop-shadow(0 0 10px #087cf0);
+}
+
+@media(max-width: 760px) {
+    .hero {
+        min-height: auto;
+        padding: 65px 7%;
+    }
+
+    .hero-mark {
+        display: none;
+    }
+}
+/* ZENOVA Products Section */
+
+.products-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(260px, 350px));
+    justify-content: center;
+    gap: 25px;
+    margin-top: 40px;
+}
+
+.coming-card {
+    position: relative;
+    padding: 35px 28px;
+    min-height: 330px;
+    background: linear-gradient(145deg, #101d31, #070e19);
+    border: 1px solid #263c58;
+    border-radius: 16px;
+    text-align: center;
+    overflow: hidden;
+    transition: 0.3s ease;
+}
+
+.coming-card:hover {
+    transform: translateY(-7px);
+    border-color: #087cf0;
+    box-shadow: 0 15px 35px #087cf022;
+}
+
+.coming-icon {
+    font-size: 75px;
+    font-weight: 900;
+    font-style: italic;
+    color: #e5edf7;
+    text-shadow: 5px 5px 0 #087cf0;
+    margin-bottom: 15px;
+}
+
+.coming-card .tag {
+    display: inline-block;
+    color: #18b8ff;
+    border-color: #087cf0;
+}
+
+.coming-card h3 {
+    font-size: 23px;
+    margin: 15px 0 8px;
+}
+
+.coming-card p {
+    color: #9aa9bb;
+    font-size: 14px;
+}
+
+.coming-line {
+    width: 65px;
+    height: 3px;
+    background: #087cf0;
+    margin: 25px auto 15px;
+    border-radius: 10px;
+}
+
+.coming-label {
+    color: #64748b;
+    font-size: 10px;
+    letter-spacing: 3px;
+}
+/* =========================
+   ZENOVA ABOUT SECTION
+========================= */
+
+.about {
+    position: relative;
+    overflow: hidden;
+}
+
+.about-grid {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 28px;
+    max-width: 1000px;
+    margin: 45px auto;
+}
+
+.about-card {
+    background: linear-gradient(145deg, #101b30, #080e1b);
+    border: 1px solid rgba(70, 145, 255, 0.2);
+    border-radius: 22px;
+    overflow: hidden;
+    display: flex;
+    align-items: center;
+    gap: 22px;
+    padding: 25px;
+    transition: 0.35s ease;
+}
+
+.about-card:hover {
+    transform: translateY(-7px);
+    border-color: #368cff;
+    box-shadow: 0 15px 40px rgba(0, 90, 200, 0.15);
+}
+
+.about-photo-placeholder {
+    min-width: 125px;
+    height: 155px;
+    border-radius: 16px;
+    background: linear-gradient(145deg, #173d72, #071326);
+    border: 1px solid rgba(80, 160, 255, 0.4);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.about-photo-placeholder span {
+    font-size: 65px;
+    font-weight: 800;
+    color: #72b5ff;
+}
+
+.about-info {
+    flex: 1;
+}
+
+.about-role {
+    color: #65aaff;
+    font-size: 13px;
+    font-weight: 700;
+}
+
+.about-info h3 {
+    color: #fff;
+    font-size: 21px;
+    margin: 10px 0;
+}
+
+.about-info p {
+    color: #b6c2d4;
+    font-size: 14px;
+    line-height: 1.8;
+    margin: 4px 0;
+}
+
+.about-line {
+    width: 45px;
+    height: 3px;
+    background: #398cff;
+    margin: 15px 0;
+    border-radius: 5px;
+}
+
+.about-info .about-description {
+    color: #8798b1;
+    font-size: 13px;
+}
+
+.about-vision {
+    max-width: 850px;
+    margin: 55px auto 0;
+    padding: 35px;
+    text-align: center;
+    background: linear-gradient(120deg, #101e35, #0a1222);
+    border: 1px solid rgba(70, 145, 255, 0.2);
+    border-radius: 20px;
+}
+
+.about-vision h3 {
+    color: #fff;
+    font-size: 25px;
+}
+
+.about-vision p {
+    color: #b6c2d4;
+    line-height: 2;
+}
+
+.about-vision span {
+    display: inline-block;
+    margin-top: 15px;
+    color: #69adff;
+    letter-spacing: 3px;
+    font-size: 12px;
+    font-weight: bold;
+}
+
+@media (max-width: 700px) {
+    .about-grid {
+        grid-template-columns: 1fr;
+    }
+
+    .about-card {
+        padding: 18px;
+        gap: 15px;
+    }
+
+    .about-photo-placeholder {
+        min-width: 95px;
+        height: 125px;
+    }
+
+    .about-info h3 {
+        font-size: 17px;
+    }
+
+    .about-vision {
+        padding: 25px 18px;
+    }
+}
+/* ZENOVA CONTACT BUTTONS */
+
+.contact-buttons {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 15px;
+    flex-wrap: wrap;
+    margin-top: 30px;
+}
+
+.contact-buttons .button {
+    min-width: 170px;
+    text-align: center;
+    transition: 0.3s ease;
+}
+
+.contact-buttons .button:first-child {
+    background: #168b65;
+    border: 1px solid #168b65;
+    color: white;
+}
+
+.contact-buttons .button:first-child:hover {
+    background: #10a875;
+    transform: translateY(-4px);
+    box-shadow: 0 8px 25px rgba(22, 139, 101, 0.25);
+}
+
+.contact-buttons .button.outline:hover {
+    transform: translateY(-4px);
+    box-shadow: 0 8px 25px rgba(55, 140, 255, 0.2);
+}
+
+@media (max-width: 500px) {
+    .contact-buttons {
+        flex-direction: column;
+    }
+
+    .contact-buttons .button {
+        width: 100%;
+    }
+}
+/* WHY ZENOVA SECTION */
+
+.why-zenova {
+    position: relative;
+    overflow: hidden;
+}
+
+.why-grid {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 22px;
+    max-width: 1100px;
+    margin: 45px auto 0;
+}
+
+.why-card {
+    padding: 35px 25px;
+    text-align: center;
+    background: linear-gradient(145deg, #101b30, #080e1b);
+    border: 1px solid rgba(70, 145, 255, 0.2);
+    border-radius: 20px;
+    transition: 0.35s ease;
+}
+
+.why-card:hover {
+    transform: translateY(-8px);
+    border-color: #398cff;
+    box-shadow: 0 15px 35px rgba(0, 90, 200, 0.15);
+}
+
+.why-card span {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    width: 60px;
+    height: 60px;
+    margin-bottom: 18px;
+    border-radius: 16px;
+    background: rgba(57, 140, 255, 0.12);
+    color: #69adff;
+    font-size: 30px;
+}
+
+.why-card h3 {
+    color: #fff;
+    font-size: 20px;
+    margin-bottom: 12px;
+}
+
+.why-card p {
+    color: #a5b4ca;
+    font-size: 14px;
+    line-height: 1.9;
+}
+/* ZENOVA FAQ SECTION */
+
+.faq-container {
+    max-width: 850px;
+    margin: 40px auto 0;
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+}
+
+.faq-item {
+    background: linear-gradient(145deg, #101b30, #080e1b);
+    border: 1px solid rgba(70, 145, 255, 0.2);
+    border-radius: 15px;
+    padding: 22px 25px;
+    transition: 0.3s ease;
+}
+
+.faq-item:hover,
+.faq-item[open] {
+    border-color: #398cff;
+}
+
+.faq-item summary {
+    color: #fff;
+    font-size: 16px;
+    font-weight: 700;
+    cursor: pointer;
+    list-style: none;
+    position: relative;
+    padding-left: 30px;
+}
+
+.faq-item summary::-webkit-details-marker {
+    display: none;
+}
+
+.faq-item summary::after {
+    content: "+";
+    position: absolute;
+    left: 0;
+    top: -4px;
+    color: #69adff;
+    font-size: 24px;
+}
+
+.faq-item[open] summary::after {
+    content: "−";
+}
+
+.faq-item p {
+    color: #a5b4ca;
+    font-size: 14px;
+    line-height: 2;
+    margin: 18px 0 0;
+}
+/* BACK TO TOP BUTTON */
+
+.back-to-top {
+    position: fixed;
+    bottom: 25px;
+    left: 25px;
+    width: 48px;
+    height: 48px;
+    border: 1px solid #398cff;
+    border-radius: 14px;
+    background: #101b30;
+    color: #69adff;
+    font-size: 25px;
+    cursor: pointer;
+    opacity: 0;
+    visibility: hidden;
+    transform: translateY(15px);
+    transition: 0.3s ease;
+    z-index: 999;
+}
+
+.back-to-top.show {
+    opacity: 1;
+    visibility: visible;
+    transform: translateY(0);
+}
+
+.back-to-top:hover {
+    background: #398cff;
+    color: white;
+    transform: translateY(-5px);
+}
+/* STICKY NAVBAR */
+
+.topbar {
+    position: sticky;
+    top: 0;
+    z-index: 1000;
+    background: rgba(5, 12, 25, 0.95);
+    backdrop-filter: blur(15px);
+    border-bottom: 1px solid rgba(57, 140, 255, 0.2);
+}
+/* ZENOVA PREMIUM ANIMATIONS */
+
+@keyframes zenovaReveal {
+    from {
+        opacity: 0;
+        transform: translateY(35px);
+        filter: blur(5px);
+    }
+
+    to {
+        opacity: 1;
+        transform: translateY(0);
+        filter: blur(0);
+    }
+}
+
+.section-heading {
+    animation: zenovaReveal 1s ease both;
+}
+
+.about-card,
+.why-card,
+.faq-item {
+    transition:
+        transform 0.4s ease,
+        border-color 0.4s ease,
+        box-shadow 0.4s ease;
+}
+
+.about-card:hover,
+.why-card:hover {
+    transform: translateY(-8px);
+    box-shadow: 0 15px 40px rgba(24, 120, 255, 0.18);
+}
+
+.button {
+    transition: all 0.35s ease;
+}
+
+.button:hover {
+    transform: translateY(-3px);
+    box-shadow: 0 8px 25px rgba(24, 120, 255, 0.25);
+}
+/* SCROLL REVEAL EFFECT */
+
+.reveal {
+    opacity: 0;
+    transform: translateY(35px);
+    filter: blur(4px);
+    transition: 
+        opacity 0.8s ease,
+        transform 0.8s ease,
+        filter 0.8s ease;
+}
+
+.reveal.active {
+    opacity: 1;
+    transform: translateY(0);
+    filter: blur(0);
+}
+.coming-card {
+    position: relative;
+    overflow: hidden;
+    transition: transform 0.35s ease, border-color 0.35s ease, box-shadow 0.35s ease;
+}
+
+.coming-card:hover {
+    transform: translateY(-10px);
+    border-color: var(--cyan);
+    box-shadow: 0 15px 40px rgba(8, 124, 240, 0.18);
+}
+
+.coming-icon {
+    transition: transform 0.35s ease, text-shadow 0.35s ease;
+}
+
+.coming-card:hover .coming-icon {
+    transform: scale(1.12);
+    text-shadow: 0 0 20px var(--cyan);
+}
+/* Product Page Buttons */
+
+.product-link,
+.product-back {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    width: fit-content;
+    margin-top: 22px;
+    padding: 11px 22px;
+    text-decoration: none;
+    white-space: nowrap;
+    position: relative;
+    z-index: 2;
+}
+
+.product-link {
+    align-self: flex-start;
+}
+
+.product-back {
+    margin-right: auto;
+    margin-left: auto;
+}
+
+.coming-card .coming-label {
+    display: block;
+    margin-bottom: 5px;
+}
+.product-back {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    margin: 25px auto 0;
+    padding: 12px 28px;
+    border: 1px solid var(--cyan);
+    border-radius: 8px;
+    color: #fff;
+    background: linear-gradient(135deg, #087cf0, #064b9b);
+    text-decoration: none;
+    font-weight: 700;
+    transition: 0.3s ease;
+}
+
+.product-back:hover {
+    transform: translateY(-4px);
+    box-shadow: 0 8px 25px rgba(8, 124, 240, 0.3);
+}
+/* BOOK REVIEWS */
+
+.review-section {
+    text-align: center;
+}
+
+.review-box {
+    max-width: 750px;
+    margin: 35px auto;
+    padding: 35px;
+}
+
+.review-box h3 {
+    color: #fff;
+    margin-bottom: 25px;
+}
+
+.review-stars {
+    display: flex;
+    justify-content: center;
+    gap: 12px;
+    direction: ltr;
+    margin-bottom: 25px;
+}
+
+.review-stars button {
+    background: none;
+    border: none;
+    color: #536174;
+    font-size: 38px;
+    cursor: pointer;
+    transition: 0.25s;
+}
+
+.review-stars button:hover,
+.review-stars button.active {
+    color: #ffc107;
+    transform: scale(1.15);
+}
+
+#review-comment {
+    width: 100%;
+    min-height: 130px;
+    padding: 15px;
+    border: 1px solid #263b58;
+    border-radius: 10px;
+    background: #081323;
+    color: #fff;
+    font-family: inherit;
+    font-size: 15px;
+    resize: vertical;
+    outline: none;
+}
+
+#review-comment:focus {
+    border-color: #087cf0;
+    box-shadow: 0 0 15px rgba(8, 124, 240, 0.15);
+}
+
+#review-message {
+    margin-top: 15px;
+    color: #18b8ff;
+}
+/* ZENOVA REVIEW CARDS */
+
+#reviews-list {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    gap: 20px;
+    max-width: 950px;
+    margin: 35px auto;
+    text-align: right;
+}
+
+.review-item {
+    background: linear-gradient(145deg, #101d31, #080f1c);
+    border: 1px solid rgba(24, 184, 255, 0.2);
+    border-radius: 14px;
+    padding: 22px;
+    transition: 0.3s ease;
+}
+
+.review-item:hover {
+    transform: translateY(-5px);
+    border-color: #087cf0;
+    box-shadow: 0 8px 25px rgba(8, 124, 240, 0.15);
+}
+
+.review-item h3 {
+    color: #ffc107;
+    font-size: 25px;
+    letter-spacing: 4px;
+    margin-bottom: 12px;
+}
+
+.review-item p {
+    color: #dce5ef;
+    font-size: 15px;
+    line-height: 1.9;
+    overflow-wrap: anywhere;
+}
+/* ZENOVA Contact Buttons */
+.contact-btn {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    gap: 10px;
+    transition: all 0.3s ease;
+}
+
+.contact-btn i {
+    font-size: 20px;
+    transition: transform 0.3s ease;
+}
+
+.contact-btn:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 8px 25px rgba(8, 124, 240, 0.3);
+}
+
+.contact-btn:hover i {
+    transform: scale(1.2);
+}
+
+.whatsapp-btn i {
+    color: #25D366;
+}
+
+.instagram-btn i {
+    color: #E1306C;
+}
+
+.email-btn i {
+    color: #18b8ff;
+}

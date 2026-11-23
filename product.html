@@ -1,0 +1,115 @@
+<!doctype html>
+<html lang="ar" dir="rtl">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta name="description" content="اكتشف منتجات ZENOVA الرقمية" />
+    <title>منتجات ZENOVA</title>
+
+    <link rel="stylesheet" href="style.css" />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Cairo:wght@400;500;600;700;800&display=swap"
+      rel="stylesheet"
+    />
+  </head>
+
+  <body>
+    <header class="topbar">
+      <a class="brand" href="index.html">
+        <span class="logo-mark">Z</span>
+        <span class="brand-name">
+          ZENOVA
+          <small>Ideas Become Products</small>
+        </span>
+      </a>
+
+      <nav class="main-nav">
+        <a href="index.html#home">الرئيسية</a>
+        <a href="index.html#products">منتجاتنا</a>
+        <a href="index.html#about">من نحن</a>
+        <a href="index.html#reviews">التقييمات</a>
+        <a href="index.html#contact">تواصل معنا</a>
+      </nav>
+
+      <a href="index.html#contact" class="header-btn">تواصل معنا ↗</a>
+    </header>
+
+    <main>
+      <section class="section product-page">
+        <div class="section-heading">
+          <p class="eyebrow">ZENOVA DIGITAL STORE</p>
+          <h1 id="product-title">اكتشف منتجاتنا</h1>
+          <p id="product-description">
+            أفكار تتحول إلى منتجات رقمية تقدم قيمة حقيقية.
+          </p>
+        </div>
+
+        <div class="coming-card product-details">
+          <div class="coming-icon" id="product-icon">Z</div>
+
+          <span class="tag" id="product-status">قريبًا</span>
+
+          <h2 id="product-name">مرحبًا بك في ZENOVA</h2>
+
+          <p id="product-details">نعمل على تطوير منتجات رقمية مميزة.</p>
+
+          <div class="coming-line"></div>
+
+          <span class="coming-label">IDEAS BECOME PRODUCTS</span>
+          <a href="index.html#products" class="product-back">
+            العودة إلى المنتجات ←
+          </a>
+        </div>
+      </section>
+    </main>
+
+    <footer class="footer">
+      <p>© 2026 ZENOVA — Ideas Become Products</p>
+    </footer>
+    <section class="section review-section" id="book-reviews">
+      <div class="section-heading">
+        <p class="eyebrow">YOUR OPINION MATTERS</p>
+        <h2>شاركنا رأيك في الكتاب</h2>
+        <p>تقييمك يساعدنا على تطوير تجربتنا وتقديم محتوى أفضل.</p>
+      </div>
+
+      <div class="coming-card review-box">
+        <h3>قيّم كتاب ما وراء الشموع</h3>
+
+        <div class="review-stars" id="review-stars">
+          <button type="button" data-rating="1">★</button>
+          <button type="button" data-rating="2">★</button>
+          <button type="button" data-rating="3">★</button>
+          <button type="button" data-rating="4">★</button>
+          <button type="button" data-rating="5">★</button>
+        </div>
+
+        <textarea
+          id="review-comment"
+          placeholder="اكتب رأيك في الكتاب..."
+        ></textarea>
+        <div
+          class="cf-turnstile"
+          data-sitekey="0x4AAAAAAGOwDrfbY5cQBJtd"
+          data-theme="dark"
+        ></div>
+
+        <button type="button" class="product-link" id="submit-review">
+          إرسال التقييم
+        </button>
+
+        <p id="review-message"></p>
+        <div id="reviews-summary">
+          <h3>تقييمات القراء</h3>
+          <p id="average-rating">0.0 / 5 ⭐</p>
+          <p id="reviews-count">0 تقييم</p>
+        </div>
+
+        <div id="reviews-list"></div>
+      </div>
+    </section>
+    <script src="https://cdn.jsdelivr.net/npm/@supabase/supabase-js@2"></script>
+    <script src="https://challenges.cloudflare.com/turnstile/v0/api.js" async defer></script>
+    <script src="product.js"></script>
+  </body>
+</html>

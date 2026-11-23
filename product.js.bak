@@ -1,0 +1,45 @@
+const products = {
+    "beyond-candles": {
+        title: "ما وراء الشموع",
+        icon: "📘",
+        status: "قريبًا",
+        description: "اكتشف عالم التداول من منظور أعمق.",
+        details: "مشروع تعليمي متخصص في فهم الأسواق وقراءة حركة الأسعار. نعمل حاليًا على تطوير النسخة النهائية."
+    },
+
+    "digital-tools": {
+        title: "Digital Products",
+        icon: "✦",
+        status: "قريبًا",
+        description: "أدوات رقمية لأفكار أكبر.",
+        details: "نعمل على تطوير مجموعة من المنتجات والأدوات الرقمية التي تجمع بين الابتكار وسهولة الاستخدام."
+    },
+
+    "coming-next": {
+        title: "What's Next?",
+        icon: "Z",
+        status: "قريبًا",
+        description: "المزيد قادم من ZENOVA.",
+        details: "لدينا أفكار ومشروعات جديدة نعمل على تحويلها إلى منتجات رقمية مميزة."
+    }
+};
+
+const params = new URLSearchParams(window.location.search);
+const productId = params.get("id");
+
+const product = products[productId];
+
+if (product) {
+    document.getElementById("product-title").textContent = product.title;
+    document.getElementById("product-name").textContent = product.title;
+    document.getElementById("product-icon").textContent = product.icon;
+    document.getElementById("product-status").textContent = product.status;
+    document.getElementById("product-description").textContent = product.description;
+    document.getElementById("product-details").textContent = product.details;
+
+    document.title = product.title + " | ZENOVA";
+} else {
+    document.getElementById("product-title").textContent = "المنتج غير موجود";
+    document.getElementById("product-name").textContent = "لم يتم العثور على المنتج";
+    document.getElementById("product-details").textContent = "تأكد من رابط المنتج وحاول مرة أخرى.";
+}
