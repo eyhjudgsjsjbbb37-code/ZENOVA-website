@@ -276,7 +276,10 @@ footer{padding:24px 7%;display:flex;align-items:center;justify-content:space-bet
 }
 
 .about-photo-placeholder {
+    width: 125px;
     min-width: 125px;
+    max-width: 125px;
+    flex: 0 0 125px;
     height: 155px;
     border-radius: 16px;
     background: linear-gradient(145deg, #173d72, #071326);
@@ -284,16 +287,15 @@ footer{padding:24px 7%;display:flex;align-items:center;justify-content:space-bet
     display: flex;
     align-items: center;
     justify-content: center;
+    overflow: hidden;
 }
 
-.about-photo-placeholder span {
-    font-size: 65px;
-    font-weight: 800;
-    color: #72b5ff;
-}
-
-.about-info {
-    flex: 1;
+.about-photo-placeholder img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    object-position: center;
+    display: block;
 }
 
 .about-role {
