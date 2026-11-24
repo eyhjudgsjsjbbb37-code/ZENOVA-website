@@ -274,7 +274,6 @@ footer{padding:24px 7%;display:flex;align-items:center;justify-content:space-bet
     border-color: #368cff;
     box-shadow: 0 15px 40px rgba(0, 90, 200, 0.15);
 }
-
 .about-photo-placeholder {
     min-width: 125px;
     height: 155px;
@@ -284,6 +283,14 @@ footer{padding:24px 7%;display:flex;align-items:center;justify-content:space-bet
     display: flex;
     align-items: center;
     justify-content: center;
+    overflow: hidden;
+}
+
+.about-photo-placeholder img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    display: block;
 }
 
 .about-photo-placeholder span {
@@ -291,7 +298,6 @@ footer{padding:24px 7%;display:flex;align-items:center;justify-content:space-bet
     font-weight: 800;
     color: #72b5ff;
 }
-
 .about-info {
     flex: 1;
 }
