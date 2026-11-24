@@ -275,7 +275,10 @@ footer{padding:24px 7%;display:flex;align-items:center;justify-content:space-bet
     box-shadow: 0 15px 40px rgba(0, 90, 200, 0.15);
 }
 .about-photo-placeholder {
+    width: 125px;
     min-width: 125px;
+    max-width: 125px;
+    flex: 0 0 125px;
     height: 155px;
     border-radius: 16px;
     background: linear-gradient(145deg, #173d72, #071326);
@@ -290,18 +293,21 @@ footer{padding:24px 7%;display:flex;align-items:center;justify-content:space-bet
     width: 100%;
     height: 100%;
     object-fit: cover;
+    object-position: center;
     display: block;
 }
 
-.about-photo-placeholder span {
-    font-size: 65px;
-    font-weight: 800;
-    color: #72b5ff;
+.about-photo-placeholder img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    object-position: center;
+    display: block;
 }
 .about-info {
     flex: 1;
+    min-width: 0;
 }
-
 .about-role {
     color: #65aaff;
     font-size: 13px;
@@ -374,9 +380,12 @@ footer{padding:24px 7%;display:flex;align-items:center;justify-content:space-bet
     }
 
     .about-photo-placeholder {
-        min-width: 95px;
-        height: 125px;
-    }
+    width: 95px;
+    min-width: 95px;
+    max-width: 95px;
+    flex: 0 0 95px;
+    height: 125px;
+}
 
     .about-info h3 {
         font-size: 17px;
