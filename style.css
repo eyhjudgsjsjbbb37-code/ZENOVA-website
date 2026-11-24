@@ -853,3 +853,10 @@ footer{padding:24px 7%;display:flex;align-items:center;justify-content:space-bet
 .email-btn i {
     color: #18b8ff;
 }
+/* Why ZENOVA - Mobile Layout */
+@media (max-width: 700px) {
+    .why-grid {
+        grid-template-columns: 1fr;
+        gap: 18px;
+    }
+}
