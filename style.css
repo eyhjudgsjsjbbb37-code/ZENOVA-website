@@ -3121,3 +3121,66 @@ body[data-theme="arctic"] .review-box button[type="submit"] {
     display: block;
     margin-top: 4px;
 }
+/* ZENOVA — REAL GOLDEN BRUSH REVEAL */
+
+.zenova-brush-logo {
+    overflow: visible;
+}
+
+.brush-letter {
+    opacity: 1 !important;
+    animation: none !important;
+    fill: url(#zenovaGoldGradient) !important;
+    stroke: #ffe7a3;
+    stroke-width: .5px;
+    filter: drop-shadow(0 0 3px rgba(214,168,75,.5));
+}
+
+.brush-mask {
+    transform: scaleX(0);
+    transform-box: fill-box;
+    transform-origin: left center;
+    animation: zenovaBrushReveal 5s ease-in-out infinite;
+}
+
+.brush-tip {
+    fill: #ffe7a3;
+    filter: drop-shadow(0 0 4px #d6a84b)
+            drop-shadow(0 0 9px #ffe7a3);
+    animation: zenovaBrushMove 5s ease-in-out infinite;
+}
+
+@keyframes zenovaBrushReveal {
+    0%, 8% {
+        transform: scaleX(0);
+    }
+    65%, 82% {
+        transform: scaleX(1);
+    }
+    92%, 100% {
+        transform: scaleX(0);
+    }
+}
+
+@keyframes zenovaBrushMove {
+    0%, 8% {
+        transform: translateX(0);
+        opacity: 0;
+    }
+    12% {
+        opacity: 1;
+    }
+    65% {
+        transform: translateX(185px);
+        opacity: 1;
+    }
+    82% {
+        transform: translateX(185px);
+        opacity: 0;
+    }
+    100% {
+        transform: translateX(0);
+        opacity: 0;
+    }
+}
+
